@@ -10,7 +10,7 @@ Many users across various forums, social media, etc are starting to receive thei
 
 Visit official documentation on [heywillow.io](https://heywillow.io).
 
-# Fork from org. WAS
+# Fork from org. Willow
 
 A fork from the original repository. The goal is to implement additional wakewords.
 Alexa (wn8_alexa)
