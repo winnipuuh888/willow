@@ -62,7 +62,7 @@
 #define HTTP_STREAM_TIMEOUT_MS 10 * 1000
 
 #define MULTINET_TWDT   30
-#define STR_WAKE_LEN    25
+#define STR_WAKE_LEN    32
 #define WIS_URL_TTS_ARG "?format=WAV&speaker=CLB&text="
 
 typedef enum willow_http_stream {
@@ -1064,6 +1064,30 @@ esp_err_t init_audio(void)
     } else if (strcmp(wake_word, "hilexin") == 0) {
 #if defined(CONFIG_SR_WN_WN9_HILEXIN) || defined(CONFIG_SR_WN_WN9_HILEXIN_MULTI)
         strncpy(wake_help, "Say 'Hi Lexin' to start!", STR_WAKE_LEN);
+#endif
+    } else if (strcmp(wake_word, "computer") == 0) {
+#if defined(CONFIG_SR_WN_WN9_COMPUTER_TTS) || defined(CONFIG_SR_WN_WN9_COMPUTER_TTS_MULTI)
+        strncpy(wake_help, "Say 'Computer' to start!", STR_WAKE_LEN);
+#endif
+    } else if (strcmp(wake_word, "heywillow") == 0) {
+#if defined(CONFIG_SR_WN_WN9_HEYWILLOW_TTS) || defined(CONFIG_SR_WN_WN9_HEYWILLOW_TTS_MULTI)
+        strncpy(wake_help, "Say 'Hey Willow' to start!", STR_WAKE_LEN);
+#endif
+    } else if (strcmp(wake_word, "jarvis") == 0) {
+#if defined(CONFIG_SR_WN_WN9_JARVIS_TTS) || defined(CONFIG_SR_WN_WN9_JARVIS_TTS_MULTI)
+        strncpy(wake_help, "Say 'Jarvis' to start!", STR_WAKE_LEN);
+#endif
+    } else if (strcmp(wake_word, "sophia") == 0) {
+#if defined(CONFIG_SR_WN_WN9_SOPHIA_TTS) || defined(CONFIG_SR_WN_WN9_SOPHIA_TTS_MULTI)
+        strncpy(wake_help, "Say 'Sophia' to start!", STR_WAKE_LEN);
+#endif
+    } else if (strcmp(wake_word, "mycroft") == 0) {
+#if defined(CONFIG_SR_WN_WN9_MYCROFT_TTS) || defined(CONFIG_SR_WN_WN9_MYCROFT_TTS_MULTI)
+        strncpy(wake_help, "Say 'Hey Willow' to start!", STR_WAKE_LEN);
+#endif
+    } else if (strcmp(wake_word, "heywanda") == 0) {
+#if defined(CONFIG_SR_WN_WN9_HEYWANDA_TTS) || defined(CONFIG_SR_WN_WN9_HEYWANDA_TTS_MULTI)
+        strncpy(wake_help, "Say 'Hey Wanda' to start!", STR_WAKE_LEN);
 #endif
     }
 
